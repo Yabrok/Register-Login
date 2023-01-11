@@ -23,6 +23,7 @@ elForm.addEventListener('submit', (evt) => {
     })
         .then((res) => res.json())
         .then((data) => {
+            console.log(data);
             if (data.token) {
                 localStorage.setItem('token', data.token);
                 location.replace('index.html')
